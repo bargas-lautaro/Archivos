@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes en Dibujo Técnico - EEST N° 7727</title>
+    <!-- Tailwind CSS para los estilos responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para un desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .text-shadow {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 selection:text-blue-900">
+
+    <!-- Header Principal -->
+    <header class="bg-blue-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-center sm:text-left mb-2 sm:mb-0">
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Dibujo Técnico</h1>
+                <p class="text-blue-200 text-sm sm:text-base">EEST N° 7727 "El Hoyo" - 3er Año</p>
+            </div>
+
+            <!-- Menú Desplegable Normas IRAM -->
+            <div class="relative">
+                <button onclick="document.getElementById('iram-dropdown').classList.toggle('hidden')"
+                    class="bg-blue-800 hover:bg-blue-700 px-3 py-1 rounded-md border border-blue-700 text-xs sm:text-sm font-semibold tracking-wider flex items-center transition-colors focus:outline-none cursor-pointer">
+                    NORMAS IRAM 4500
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Dropdown -->
+                <div id="iram-dropdown"
+                    class="hidden absolute right-0 mt-2 w-64 sm:w-72 bg-white rounded-lg shadow-xl border border-slate-200 z-50 text-left overflow-hidden">
+                    <div class="bg-blue-50 px-4 py-3 border-b border-slate-200">
+                        <h4 class="font-bold text-blue-900 text-sm">Normas IRAM aplicadas:</h4>
+                    </div>
+                    <ul class="text-sm text-slate-700 divide-y divide-slate-100">
+                        <li class="px-4 py-3 hover:bg-slate-50 transition-colors">
+                            <a href="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/NORMAS-IRAM-CORTE.pdf"
+                                target="_blank" class="block">
+                                <strong class="text-blue-700 block">IRAM 4507</strong>
+                                Representación de secciones y cortes.
+                            </a>
+                        </li>
+                        <li class="px-4 py-3 hover:bg-slate-50 transition-colors">
+                            <a href="https://drive.google.com/file/d/19omKlu_waJZ3_knuhhEOo7ILqDdp-N7A/view?usp=sharing"
+                                target="_blank" class="block">
+                                <strong class="text-blue-700 block">normas iram 2009</strong>
+                                Rayados indicadores de secciones y cortes.
+                            </a>
+                        </li>
+                        <li class="px-4 py-3 hover:bg-slate-50 transition-colors">
+                            <a href="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/NORMAS-IRAM-LINEAS.pdf"
+                                target="_blank" class="block">
+                                <strong class="text-blue-700 block">IRAM 4502</strong>
+                                Tipos de líneas (ejes, contornos, trazos).
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+
+        <!-- Título del Tema -->
+        <div class="mb-8 text-center sm:text-left border-b-2 border-slate-200 pb-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-2">Procedimiento de Cortes</h2>
+            <p class="text-slate-600 text-lg">Representación de formas interiores en piezas.</p>
+        </div>
+
+        <!-- Introducción -->
+        <section class="bg-white rounded-xl shadow-sm p-6 mb-8 border border-slate-100 leading-relaxed">
+            <p class="mb-4 text-slate-700">
+                <strong>Bienvenidos a esta nueva unidad de Dibujo Técnico.</strong> Hasta ahora, hemos aprendido a
+                representar las caras visibles de un objeto y a utilizar líneas de trazos para indicar aquellas formas
+                que quedan ocultas en su interior. Sin embargo, cuando una pieza tiene detalles internos complejos (como
+                agujeros pasantes, ranuras o cavidades escalonadas), las líneas de trazos pueden superponerse y hacer
+                que la interpretación del plano sea una tarea muy confusa.
+            </p>
+            <p class="font-medium text-slate-900 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                Con el objeto de conseguir claridad en los dibujos, se recurre a cortar (imaginariamente) la pieza por
+                el lugar más apropiado, y a continuación, se obtiene la proyección en corte de la pieza.
+            </p>
+        </section>
+
+        <!-- Índice / Distribución -->
+        <nav class="bg-slate-800 rounded-xl shadow-md p-6 mb-8 text-white">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                </svg>
+                Distribución del contenido
+            </h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base">
+                <li><a href="#que-es-corte" class="flex items-center hover:text-blue-300 transition-colors"><span
+                            class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> ¿Qué es un corte?</a></li>
+                <li><a href="#pasos" class="flex items-center hover:text-blue-300 transition-colors"><span
+                            class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> Pasos para realizar un corte</a></li>
+                <li><a href="#plano" class="flex items-center hover:text-blue-300 transition-colors"><span
+                            class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> El corte en la lámina de dibujo</a>
+                </li>
+                <li><a href="#resumen" class="flex items-center hover:text-blue-300 transition-colors"><span
+                            class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> Recuerda que...</a></li>
+            </ul>
+        </nav>
+
+        <!-- Desarrollo: ¿Qué es un Corte? -->
+        <section id="que-es-corte" class="mb-10 scroll-mt-24">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+                <span
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                El Corte
+            </h3>
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                <p class="mb-4 text-slate-700">El corte debe ser una operación que se haga para representar, de forma
+                    clara, las piezas con partes interiores, ya que de no hacerse así, la representación sería confusa.
+                </p>
+
+                <blockquote
+                    class="text-xl font-semibold text-center text-blue-900 bg-blue-50 py-4 px-6 rounded-lg my-6 border-y border-blue-200">
+                    "Corte, es una representación que muestra las formas interiores de una pieza."
+                </blockquote>
+
+                <p class="text-slate-700">Con esto se quiere decir que solo se cortarán aquellas piezas que tengan
+                    partes interiores y que no queden debidamente representadas con otro tipo de vistas. Aunque la pieza
+                    elegida podría representarse sin la realización de un corte, se utiliza esta herramienta para
+                    ejemplificar el proceso de corte.</p>
+
+                <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen1.png?raw=true"
+                    alt="Ejemplo de pieza en corte"
+                    class="w-full max-w-md mx-auto rounded-lg shadow-sm border border-slate-200 mt-6">
+            </div>
+        </section>
+
+        <!-- Desarrollo: Pasos -->
+        <section id="pasos" class="mb-10 scroll-mt-24">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+                <span
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                Pasos para realizar un corte
+            </h3>
+            <p class="text-slate-700 mb-6">Para que el corte cumpla con las normas de representación (rigiéndonos
+                estrictamente por las <strong>Normas IRAM de la serie 4500</strong>), se deben seguir las siguientes
+                operaciones:</p>
+
+            <div class="space-y-6">
+                <!-- Paso 1 -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-l-blue-500 p-6">
+                    <h4 class="text-lg font-bold text-blue-900 mb-2">Paso 1</h4>
+                    <p class="text-slate-700 mb-4">Se determina el plano de corte, que ha de ser paralelo al plano de
+                        proyección. Se elegirá el plano más adecuado para que la representación sea lo más clara
+                        posible. En este caso, se elige un plano que pasa por el centro del agujero pasante.</p>
+
+                    <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen2.png?raw=true"
+                        alt="Determinación del plano de corte"
+                        class="w-full max-w-md mx-auto rounded-lg shadow-sm border border-slate-200 mt-4">
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-l-blue-600 p-6">
+                    <h4 class="text-lg font-bold text-blue-900 mb-2">Paso 2</h4>
+                    <p class="text-slate-700 mb-4">Se realiza imaginariamente el aserrado de la pieza, por el plano de
+                        corte elegido. Se elimina mentalmente la parte de la pieza que está entre el plano de corte y el
+                        observador, y se proyecta como si fuese la pieza real. En este ejemplo, el alzado se representa
+                        en corte, mientras que la planta, se representará entera. Recordamos que el aserrado es mental,
+                        no es real.</p>
+
+                    <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen3.png?raw=true"
+                        alt="Aserrado imaginario de la pieza"
+                        class="w-full max-w-md mx-auto rounded-lg shadow-sm border border-slate-200 mt-4">
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-white rounded-xl shadow-sm border-l-4 border-l-blue-700 p-6">
+                    <h4 class="text-lg font-bold text-blue-900 mb-2">Paso 3</h4>
+                    <p class="text-slate-700 mb-4">Se efectúa la proyección de la parte de la pieza que está entre el
+                        plano de corte y el plano de proyección.</p>
+
+                    <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen4.png?raw=true"
+                        alt="Proyección de la pieza"
+                        class="w-full max-w-md mx-auto rounded-lg shadow-sm border border-slate-200 mt-4">
+                </div>
+
+                <!-- Proyecciones -->
+                <div class="bg-blue-50 rounded-xl shadow-sm border-l-4 border-l-blue-800 p-6 mt-6">
+                    <h4 class="text-lg font-bold text-blue-900 mb-2">Proyecciones</h4>
+                    <p class="text-slate-700 mb-4">Según esto, nos quedaría el alzado representado en corte y la planta
+                        (que se realiza entera). La zona de la pieza por donde pasa el plano de corte, se representa con
+                        un rayado a 45º. De esta forma, distinguimos la parte de pieza que es maciza (rayada) y la que
+                        es hueca (sin rayar).</p>
+
+                    <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen5.png?raw=true"
+                        alt="Proyecciones y rayado"
+                        class="w-full max-w-md mx-auto rounded-lg shadow-sm border border-slate-200 mt-4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Desarrollo: Plano de dibujo (Lámina) -->
+        <section id="plano" class="mb-10 scroll-mt-24">
+            <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+                <span
+                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                Plano de dibujo (o lámina)
+            </h3>
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-slate-100">
+                <p class="text-slate-700 mb-4">Como ya se ha visto en Obtención de vistas una cosa son las vistas y otra
+                    es la representación de esas vistas en un plano de dibujo o una lámina. Para esto tendremos que
+                    tener en cuenta:</p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">Las superficies por donde pasa el plano de corte, se rayan a 45º
+                            con líneas finas.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">El plano de corte (en caso de existir dudas por donde se ha cortado
+                            la pieza) se representa con una línea de eje (trazo de línea y punto fino), resaltado con
+                            dos trazos gruesos al final de la línea.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">Se colocarán dos flechas indicando la dirección de proyección, es
+                            decir, qué parte de la pieza es la que se representa.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">En la vista en que se representa el plano de corte (en este
+                            ejemplo, en la planta) se colocan dos letras mayúsculas en los extremos del plano de corte y
+                            junto a las flechas, del tipo A-A o A-B.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-green-500 mr-2 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">En la parte representada en corte, se colocarán las mismas letras,
+                            indicando cual es el corte representado (en este ejemplo A-A).</span>
+                    </li>
+                </ul>
+
+                <img src="https://github.com/bargas-lautaro/Archivos/blob/main/representaciongrafica3ro2026/Imagen6.png?raw=true"
+                    alt="Ejemplo de plano de dibujo"
+                    class="w-full max-w-2xl mx-auto rounded-lg shadow-sm border border-slate-200 mt-4">
+            </div>
+        </section>
+
+        <!-- Recuerda que... -->
+        <section id="resumen" class="mb-10">
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <svg class="w-24 h-24 text-amber-500" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-amber-900 mb-4 relative z-10 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Resumen: Recuerda que...
+                </h3>
+                <ul class="list-disc pl-5 space-y-2 text-amber-800 relative z-10 font-medium">
+                    <li>Los cortes se realizan para conseguir <strong class="text-amber-900">claridad</strong> en los
+                        dibujos.</li>
+                    <li>Se realiza el corte (imaginario) de la pieza por el lugar más apropiado.</li>
+                    <li>Se proyecta la vista en corte y el resto de la pieza, entera (como si no hubiese corte).</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 mt-8">
+        <div class="max-w-4xl mx-auto px-4 text-center text-sm">
+            <p>Material de estudio - Dibujo Técnico. Escuela de Educación Secundaria Técnica N° 7727 - El Hoyo.</p>
+            <p class="mt-2">Basado en las Normas IRAM serie 4500.</p>
+            <p class="mt-4 pt-4 border-t border-slate-800 italic">
+                Desarrollado por: <span class="text-slate-300 not-italic font-bold">Bargas, Nehuen Lautaro</span> —
+                28/04/2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script para interacciones -->
+    <script>
+        // Cerrar el dropdown de normas IRAM si se hace click fuera de él
+        document.addEventListener('click', function (event) {
+            const dropdown = document.getElementById('iram-dropdown');
+            if (!dropdown) return;
+            const button = dropdown.previousElementSibling;
+
+            // Si el click no fue dentro del dropdown ni en el botón, lo ocultamos
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
