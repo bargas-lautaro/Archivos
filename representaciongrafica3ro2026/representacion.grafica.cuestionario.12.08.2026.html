@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Técnico: Normas IRAM - 3° Año E.E.T.P</title>
+    <style>
+        :root {
+            --primary-color: #0d47a1;
+            --secondary-color: #1976d2;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #212121;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .header h2 {
+            color: #555;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .question-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+            padding: 18px;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .question-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #1a237e;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .options li {
+            margin-bottom: 8px;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .options label:hover {
+            background-color: #f0f4f8;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .options label:hover {
+                background: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Cuestionario Técnico: Normas IRAM</h1>
+        <h2>Líneas (4502), Acotación (4513) y Cortes (4507) — 3° Año E.E.T.P</h2>
+    </div>
+
+    <form id="quiz-form">
+
+        <div class="question-card">
+            <div class="question-title">1. ¿Cuál es el objetivo principal de realizar un corte o sección en una pieza según la Norma IRAM 4507?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="a"> a) Hacer que la pieza se vea más estética en la lámina.</label></li>
+                <li><label><input type="radio" name="q1" value="b"> b) Mostrar con claridad los detalles y formas interiores u ocultas del objeto.</label></li>
+                <li><label><input type="radio" name="q1" value="c"> c) Reducir el tamaño del dibujo para que quepa en el formato de la hoja.</label></li>
+                <li><label><input type="radio" name="q1" value="d"> d) Indicar únicamente la rugosidad superficial de la pieza.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">2. ¿Cuál es la aplicación principal de la Línea Continua Gruesa (Tipo A) según la Norma IRAM 4502?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="a"> a) Representar contornos y aristas visibles de la pieza.</label></li>
+                <li><label><input type="radio" name="q2" value="b"> b) Indicar ejes de simetría y revolución.</label></li>
+                <li><label><input type="radio" name="q2" value="c"> c) Trazar las líneas de cota y auxiliares de cota.</label></li>
+                <li><label><input type="radio" name="q2" value="d"> d) Dibujar las partes ocultas del objeto.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">3. ¿Con qué tipo de línea e inclinación se realiza habitualmente el rayado que identifica la superficie cortada de una pieza?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="a"> a) Línea continua gruesa a 30° respecto a los ejes principales.</label></li>
+                <li><label><input type="radio" name="q3" value="b"> b) Línea continua fina (Tipo B) inclinada a 45° respecto a la base o ejes.</label></li>
+                <li><label><input type="radio" name="q3" value="c"> c) Línea de trazos fina a 90° respecto a la base.</label></li>
+                <li><label><input type="radio" name="q3" value="d"> d) Línea de trazo y punto fina a 60°.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">4. En el dibujo mecánico bajo Normas IRAM, si no se especifica otra unidad en el plano, ¿en qué unidad están expresadas todas las cifras de cota?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="a"> a) Centímetros (cm).</label></li>
+                <li><label><input type="radio" name="q4" value="b"> b) Metros (m).</label></li>
+                <li><label><input type="radio" name="q4" value="c"> c) Milímetros (mm).</label></li>
+                <li><label><input type="radio" name="q4" value="d"> d) Pulgadas (in).</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">5. Las líneas de cota y las líneas auxiliares de cota deben trazarse obligatoriamente con:</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="a"> a) Línea continua gruesa (Tipo A).</label></li>
+                <li><label><input type="radio" name="q5" value="b"> b) Línea continua fina (Tipo B).</label></li>
+                <li><label><input type="radio" name="q5" value="c"> c) Línea de trazos (Tipo E).</label></li>
+                <li><label><input type="radio" name="q5" value="d"> d) Línea de trazo y punto (Tipo F).</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">6. ¿Qué indican las flechas situadas en los extremos de la línea que representa el plano de corte?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="a"> a) El sentido en el que debe girar la pieza en el torno.</label></li>
+                <li><label><input type="radio" name="q6" value="b"> b) La dirección de observación desde la cual se mira el corte resultante.</label></li>
+                <li><label><input type="radio" name="q6" value="c"> c) La dimensión total de la sección cortada.</label></li>
+                <li><label><input type="radio" name="q6" value="d"> d) La escala en la que se dibujó el corte.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">7. ¿Qué tipo de línea se debe utilizar para representar contornos y aristas no visibles (ocultas)?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="a"> a) Línea continua fina (Tipo B).</label></li>
+                <li><label><input type="radio" name="q7" value="b"> b) Línea de trazos fina (Tipo E).</label></li>
+                <li><label><input type="radio" name="q7" value="c"> c) Línea de trazo y punto gruesa (Tipo G).</label></li>
+                <li><label><input type="radio" name="q7" value="d"> d) Línea en zig-zag (Tipo D).</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">8. En una cota horizontal, ¿dónde debe colocarse el número o cifra de cota?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="a"> a) Debajo de la línea de cota, centrada.</label></li>
+                <li><label><input type="radio" name="q8" value="b"> b) Interrumpiendo la línea de cota justo en el medio.</label></li>
+                <li><label><input type="radio" name="q8" value="c"> c) Por encima de la línea de cota, centrada y sin tocarla.</label></li>
+                <li><label><input type="radio" name="q8" value="d"> d) Alineada junto a la flecha derecha.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">9. ¿Cómo se designan o nombran habitualmente los planos de corte según la norma?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" value="a"> a) Con números romanos (ej: Corte I-I, II-II).</label></li>
+                <li><label><input type="radio" name="q9" value="b"> b) Con letras mayúsculas de las primeras del abecedario (ej: Corte A-A, B-B).</label></li>
+                <li><label><input type="radio" name="q9" value="c"> c) Con símbolos de diámetros (ej: Corte Ø1-Ø1).</label></li>
+                <li><label><input type="radio" name="q9" value="d"> d) Con números arábigos correlativos (ej: Corte 1-1, 2-2).</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">10. La línea de Trazo y Punto Fina (Tipo F) se utiliza principalmente para indicar:</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="a"> a) Los márgenes exteriores de la lámina.</label></li>
+                <li><label><input type="radio" name="q10" value="b"> b) El rayado de superficies en un corte.</label></li>
+                <li><label><input type="radio" name="q10" value="c"> c) Los ejes de simetría y de revolución.</label></li>
+                <li><label><input type="radio" name="q10" value="d"> d) Los bordes de piezas adyacentes.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">11. ¿Cómo debe ser la forma y acabado de la flecha de cota según las normas IRAM?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q11" value="a"> a) Abierta, formando un ángulo de 90°.</label></li>
+                <li><label><input type="radio" name="q11" value="b"> b) Rellena (ennegrecida), con un ángulo agudo de aprox. 15°.</label></li>
+                <li><label><input type="radio" name="q11" value="c"> c) Un pequeño círculo vacío en el extremo.</label></li>
+                <li><label><input type="radio" name="q11" value="d"> d) Una línea diagonal cortando la esquina a 45°.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">12. Según la normativa IRAM de cortes, ¿cuál de los siguientes elementos NO se debe rayar ni cortar longitudinalmente si el plano de corte pasa por su eje?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q12" value="a"> a) El cuerpo o carcasa principal de una bomba de agua.</label></li>
+                <li><label><input type="radio" name="q12" value="b"> b) Una pared o perfil estructural hueco.</label></li>
+                <li><label><input type="radio" name="q12" value="c"> c) Elementos macizos de unión como tornillos, remaches, pasadores o ejes macizos.</label></li>
+                <li><label><input type="radio" name="q12" value="d"> d) Una buje o camisa cilíndrica hueca.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">13. ¿Cuál de las siguientes es una regla fundamental para evitar confusiones al acotar?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q13" value="a"> a) Las líneas de cota pueden cruzarse libremente entre sí.</label></li>
+                <li><label><input type="radio" name="q13" value="b"> b) Las líneas de cota nunca deben cruzarse entre sí ni con líneas auxiliares.</label></li>
+                <li><label><input type="radio" name="q13" value="c"> c) Siempre es preferible acotar dentro del dibujo de la pieza.</label></li>
+                <li><label><input type="radio" name="q13" value="d"> d) Las cotas de mayor longitud se ubican más cerca de la pieza que las cortas.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">14. En una cota vertical, ¿cómo debe ubicarse la cifra de cota para su correcta lectura?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q14" value="a"> a) A la izquierda de la línea de cota, orientada para leerse desde la derecha.</label></li>
+                <li><label><input type="radio" name="q14" value="b"> b) A la derecha de la línea de cota, leída de cabeza.</label></li>
+                <li><label><input type="radio" name="q14" value="c"> c) Cruzando la línea de cota horizontalmente.</label></li>
+                <li><label><input type="radio" name="q14" value="d"> d) Por debajo de la línea auxiliar inferior.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">15. Al acotar el diámetro de una circunferencia en una vista donde no se ve la forma circular completa, ¿qué símbolo antecede a la cifra?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q15" value="a"> a) R</label></li>
+                <li><label><input type="radio" name="q15" value="b"> b) Ø</label></li>
+                <li><label><input type="radio" name="q15" value="c"> c) □</label></li>
+                <li><label><input type="radio" name="q15" value="d"> d) SØ</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">16. Según la Norma IRAM 4513, ¿cuál de los siguientes elementos NO forma parte del sistema de acotación?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q16" value="a"> a) La línea auxiliar de cota.</label></li>
+                <li><label><input type="radio" name="q16" value="b"> b) La flecha de cota.</label></li>
+                <li><label><input type="radio" name="q16" value="c"> c) El valor numérico o cifra de cota.</label></li>
+                <li><label><input type="radio" name="q16" value="d"> d) La línea de contorno oculto.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">17. Para acotar el radio de un arco de circunferencia se antepone la letra "R". ¿Dónde debe situarse la flecha de cota?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q17" value="a"> a) Exclusivamente en el centro del arco.</label></li>
+                <li><label><input type="radio" name="q17" value="b"> b) En el arco de la circunferencia, pudiendo apuntar hacia adentro o afuera.</label></li>
+                <li><label><input type="radio" name="q17" value="c"> c) En ambos extremos del arco al mismo tiempo.</label></li>
+                <li><label><input type="radio" name="q17" value="d"> d) Sobre la línea auxiliar de cota exterior.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">18. ¿Para qué se utiliza la línea de Trazo y Punto Fina con Extremos Gruesos (Tipo G)?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q18" value="a"> a) Para indicar la traza de los planos de corte o sección.</label></li>
+                <li><label><input type="radio" name="q18" value="b"> b) Para dibujar roscas y engranajes.</label></li>
+                <li><label><input type="radio" name="q18" value="c"> c) Para delimitar el recuadro del rótulo.</label></li>
+                <li><label><input type="radio" name="q18" value="d"> d) Para indicar contornos de piezas terminadas.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">19. En el sistema de acotación en paralelo:</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q19" value="a"> a) Todas las cotas de la misma dirección parten desde un plano o cara de referencia común.</label></li>
+                <li><label><input type="radio" name="q19" value="b"> b) Las cotas se ubican una a continuación de la otra en una misma línea continua.</label></li>
+                <li><label><input type="radio" name="q19" value="c"> c) Las líneas de cota se cruzan formando un ángulo de 90°.</label></li>
+                <li><label><input type="radio" name="q19" value="d"> d) No se utilizan líneas auxiliares de cota.</label></li>
+            </ul>
+        </div>
+
+        <div class="question-card">
+            <div class="question-title">20. ¿En qué consiste la acotación en serie (o en cadena)?</div>
+            <ul class="options">
+                <li><label><input type="radio" name="q20" value="a"> a) Todas las medidas parten desde el centro exacto de la pieza.</label></li>
+                <li><label><input type="radio" name="q20" value="b"> b) Cada cota se coloca a continuación de la otra en una misma alineación.</label></li>
+                <li><label><input type="radio" name="q20" value="c"> c) Se colocan únicamente cotas parciales sin acotar el total.</label></li>
+                <li><label><input type="radio" name="q20" value="d"> d) Se sustituyen las flechas por puntos gruesos en todas las medidas.</label></li>
+            </ul>
+        </div>
+
+    </form>
+
+    <div class="footer">
+        Bargas Nehuen Lautaro — 12/08/2026
+    </div>
+</div>
+
+</body>
+</html>
